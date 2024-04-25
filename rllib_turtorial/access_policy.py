@@ -9,7 +9,6 @@ policy = algo.get_policy()
 # print(policy.get_weights())
 
 
-
 # Same as above
 # print(
 #     "local worker default policy's weights: "

@@ -1,20 +1,12 @@
-import ray
 from ray.rllib.algorithms import PPOConfig
-from ray.tune.logger import pretty_print
-
 
 config = (
     PPOConfig()
     .environment("CartPole-v1")
     .rollouts(num_rollout_workers=2)
-    .resources(
-        num_gpus=0.5,
-        num_gpus_per_worker=0.1
-    )
+    .resources(num_gpus=0.5, num_gpus_per_worker=0.1)
     .framework("torch")
-    .training(
-        model={"fcnet_hiddens": [64, 64]}
-    )
+    .training(model={"fcnet_hiddens": [64, 64]})
 )
 
 algo = config.build()
