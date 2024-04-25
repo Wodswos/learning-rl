@@ -1,6 +1,5 @@
-import ray
 from ray.rllib.algorithms import PPOConfig
-from ray.tune.logger import pretty_print
+# from ray.tune.logger import pretty_print
 
 
 config = (
